@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Stack</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- landing page -->
+    <section id="landing">
+      <div class="landing-content">
+        <p>
+          At Publicis Sapient, my team and I created a chatbot which our
+          client's senior leaders could use to gain insights on their operations
+          data, enabling better business decisions.
+        </p>
+        <button onclick="scrollToTechStack()">
+          Go to Interactive Tech Stack
+        </button>
+      </div>
+    </section>
+
+    <!-- interactive tech stack -->
+    <section id="tech-stack">
+      <div class="container">
+        <div class="tech-item">
+          <img src="./logos/react.webp" alt="React" />
+          <div class="tech-description">
+            React: Developed the interactive frontend interface.
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="./logos/nodejs.png" alt="Node.js" />
+          <div class="tech-description">
+            Node.js: Implemented the backend server for handling API requests.
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="./logos/cloudrun.png" alt="Google Cloud Run" />
+          <div class="tech-description">
+            Google Cloud Run: Deployed and managed our scalable containerized application.
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="./logos/vertexai.webp" alt="Vertex AI" />
+          <div class="tech-description">
+            Vertex AI: Utilized the Gemini 1.5 Flash model for machine learning predictions.
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="./logos/langchain.png" alt="Langchain" />
+          <div class="tech-description">
+            Langchain: Natural language processing and prompt engineering to refine model.
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="./logos/bigquery.webp" alt="BigQuery" />
+          <div class="tech-description">
+            BigQuery: Performed large-scale operations data analysis and querying.
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="./logos/python.png" alt="Python" />
+          <div class="tech-description">
+            Python: Developed AI model workflows and integrated with BigQuery.
+          </div>
+        </div>
+        <div class="tech-item">
+          <img src="./logos/flask.svg" alt="Flask" />
+          <div class="tech-description">
+            Flask: Created a lightweight web server to interface Python logic with the frontend.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function scrollToTechStack() {
+        document
+          .getElementById("tech-stack")
+          .scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+  </body>
+</html>

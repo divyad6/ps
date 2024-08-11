@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    text-align: center;
+}
+
+#landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+#landing p {
+    font-size: 2rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    padding: 30px;
+}
+
+#landing button {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: #ba4e7d;
+    color: #ffffff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#landing button:hover {
+    background-color: #b87090;
+}
+
+#tech-stack {
+    padding: 50px 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    max-width: 1200px; 
+    width: 100%;
+    margin: 0 auto;
+}
+
+.tech-item {
+    position: relative;
+    width: 250px;
+    height: 250px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-item:hover img {
+    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.534);
+}
+
+.tech-description {
+    font-size: 1rem;
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color: rgba(220, 220, 220, 0.604);
+    color: #fff;
+}
+
+/* position tech-description based on the row (top or bottom) */
+.tech-item:nth-child(4n+1),
+.tech-item:nth-child(4n+2),
+.tech-item:nth-child(4n+3),
+.tech-item:nth-child(4n+4) {
+    /* ensure the description appears below the tech-item */
+    margin-bottom: 50px;
+}
+
+.tech-item:nth-child(4n+1) .tech-description,
+.tech-item:nth-child(4n+2) .tech-description,
+.tech-item:nth-child(4n+3) .tech-description,
+.tech-item:nth-child(4n+4) .tech-description {
+    position: absolute;
+    bottom: -60px; /* position below the image */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.tech-item:nth-child(4n+1):hover .tech-description,
+.tech-item:nth-child(4n+2):hover .tech-description,
+.tech-item:nth-child(4n+3):hover .tech-description,
+.tech-item:nth-child(4n+4):hover .tech-description {
+    opacity: 1;
+}
+
+/* adjust positioning for items in the first row */
+.tech-item:nth-child(-n+4) .tech-description {
+    bottom: 100%; /* position above the image */
+    top: auto;
+    margin-bottom: 25px;
+}
